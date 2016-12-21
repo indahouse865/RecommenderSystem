@@ -1,0 +1,2 @@
+
+redis-cli get test

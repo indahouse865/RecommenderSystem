@@ -1,0 +1,25 @@
+syntax="proto3";
+
+//Recommender service rpc
+service Recommender{
+	rpc GetRecommendations(UsersInfo) returns (UsersRecommendations) {}
+	rpc RemoveRecommendation(RemoveInfo) returns (Nothing) {}
+}
+
+//get the users id
+message UsersInfo{
+	int32 userId=1;
+}
+
+//return the recommendation list for the user
+message UsersRecommendations{
+	repeated string recommendations=1;
+}
+
+//removes this user from the recommendation list
+message RemoveInfo{
+	int32 userId=1;
+	int32 removeId=2;
+}
+
+message Nothing{}
