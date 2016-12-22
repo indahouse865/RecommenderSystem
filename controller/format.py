@@ -3,10 +3,6 @@ from collections import defaultdict
 import re
 #import boto
 
-##aws s3 cp s3://recommenderdump . --recursive
-##fomrat(./part-r-00000, ./part-r-00001, ./part-r-00002)
-##aws s3 cp formatted.txt s3://recommenderdump/fin.txt
-
 in1 = "./" + sys.argv[1]
 in2 = "./" + sys.argv[2]
 in3 = "./" + sys.argv[3]
